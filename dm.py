@@ -39,13 +39,12 @@ def résoudre(G):
         for j in range(9):
             if G[i][j] == None:
                 for x in possibles(G, i, j):
-                    print("i = ", i, " j = ", j, " x = ", x)
+                    print("i = ", i, " j = ", j, " x = ", x, possibles(G, i, j))
                     G[i][j] = x
                     if résoudre(G):
                         return (True)
-                else:
-                    G[i][j] == None
-                    return (False)
+                G[i][j] == None
+                return (False)
     return (True)
 
 s = "2.69.4.....5..69878....5..23..6..25.65.....73.91..3..45..1....81634..7.....5.74.6"
